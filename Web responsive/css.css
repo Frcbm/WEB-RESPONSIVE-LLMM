@@ -1,0 +1,309 @@
+/*Características de estilo comunes a todo el contenido*/
+body{
+    background-color: #0f0f0f;    
+    margin:0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    height: 100vh;
+}
+/*Estilos de los principales contenedores que seran fijos*/
+header{
+    display:flex;
+    justify-content: flex-start;
+    align-content: flex-start;
+    align-self: flex-start;
+    width: 99.35%;
+    border: 6px solid #800080;
+    z-index: 1000;
+    position:fixed;
+}
+nav, #camiseta{
+    color: #0f0f0f;
+    position: fixed;
+    text-align: center;
+}
+footer{
+    display:flex;
+    flex-direction: column;
+    align-self: flex-end;
+    align-content: flex-end;
+    padding: 20px;
+    width: 97%;
+    text-align: center;
+    color:white;
+}
+/*Definimos colores y bordes de las principales cajas*/
+nav, #camiseta{
+    border: 4px solid #800080;
+}
+header, nav, #camiseta{
+    background-color: #D4AF37;
+}
+.parrafo, footer{
+    border:4px solid #D4AF37;
+}
+h1{
+    color:#D4AF37; 
+}
+/*Definimos los estilos con los que se vera el contenido que encontraremos 
+dentro de los mains*/
+.parrafo{
+    display:flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    align-self: center;
+    font-size: 20pt;
+    padding:15px;
+    width: 70%;  
+}
+iframe{
+    width:50%;
+    height: 400px;
+}
+/*Estilos de enlaces*/
+a, .parrafo{
+    color: white;
+}
+a:visited{
+    color:#800080;
+}
+/*Hemos creado una clase para modificar el tamaño de las fotos,
+sin embargo algunas necesitaban ciertas carcteristicas especiales y por eso 
+les hemos creado sus id propios*/
+.fotos{
+    width: 30%;
+    height: auto;
+}
+#cam{
+    width:100%;
+    height:75%;
+}#intel{
+    width:3%;
+    height: auto;
+}
+/*La primera media querie la usaremos para pantallas grandes*/
+@media screen and (max-device-width: 1920px){
+    /*Definimos estilos propios para esta resolución*/
+    header{
+        height:21%;
+    }
+    #cabecera{
+        width: 80%;
+        height: 100%;
+    }
+    /*Situamos correctament el contenidode dentro del header*/
+    #logo, #cabecera, #intel{
+        padding-bottom:1%;
+    }
+    #logo{
+        width: 9%;
+        height: 100%;
+    }
+    /*Colocamos los 2 contenedores laterales*/
+    nav{
+        margin-top:18%;
+        display: flex;
+        flex-direction: column;
+        font-size: 16pt;
+        height: auto;
+        width: 15%;
+        z-index:1000;
+        text-align: center;
+    }
+    #camiseta{
+        margin-top:18%;
+        display:flex;
+        flex-direction: column;
+        align-self: flex-end;
+        align-items: center;
+        height: auto;
+        width: 11%;
+    }
+    /*Colocamos el contenido principal de la página*/
+    main{
+        margin-top:13%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex-grow: 1;
+        padding:50px;
+    }
+    /*Ha sido necesario también colocar en cada media querie este texto
+    cambiando también el tamaño de la letra*/
+    h1{
+        margin-top:30%;
+        margin-left: 100%;
+        font-size: 64pt;
+    }
+}
+/*La segunda media querie es para pantallas de tamaño medio*/
+@media screen and (max-device-width: 1500px){
+    /*Definimos estilos propios para esta resolución*/
+    header{
+        height:21%;
+    }
+    #cabecera{
+        width: 80%;
+        height: 180px;
+    }
+    /*Situamos correctament el contenidode dentro del header*/
+    #cabecera, #intel{
+        padding-bottom:1%;
+    }
+    #logo{
+        width: 12%;
+        height: auto;
+        margin-top:0.2%
+    }
+    /*Colocamos los 2 contenedores laterales*/
+    nav{
+        margin-top:25%;
+        display: flex;
+        flex-direction: column;
+        font-size: 16pt;
+        height: auto;
+        width: 15%;
+        z-index:1000;
+        text-align: center;
+    }
+    #camiseta{
+        margin-top:25%;
+        display:flex;
+        flex-direction: column;
+        align-self: flex-end;
+        align-items: center;
+        height: auto;
+        width: 11%;
+    }
+    /*Colocamos el contenido principal de la página*/
+    main{
+        margin-top:19%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex-grow: 1;
+        padding:50px;
+    }
+    /*Ha sido necesario también colocar en cada media querie este texto
+    cambiando también el tamaño de la letra*/
+    h1{
+        margin-top:30%;
+        margin-left: 50%;
+        font-size: 48pt;
+
+    }   
+}
+/*La tercera media querie esta pensada para tabletas*/
+@media screen and ((max-device-width: 900px)){
+    /*Definimos estilos propios para esta resolución*/
+    header{
+        height:6%;
+    }
+    #cabecera{
+        width: 80%;
+        height: 100%;
+        
+    }
+    /*Situamos correctament el contenidode dentro del header*/
+    #cabecera, #intel{
+        padding-bottom:1%;
+    }
+    #logo{
+        width: 7%;
+        height: auto;
+    }
+    /*Colocamos los 2 contenedores laterales*/
+    nav{
+        margin-top:40%;
+        display: flex;
+        flex-direction: column;
+        font-size: 16pt;
+        height: auto;
+        width: 15%;
+        z-index:1000;
+        text-align: center;
+    }
+    #camiseta{
+        margin-top:40%;
+        display:flex;
+        flex-direction: column;
+        align-self: flex-end;
+        align-items: center;
+        height: auto;
+        width: 11%;
+    }
+    /*Colocamos el contenido principal de la página*/
+    main{
+        margin-top:15%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex-grow: 1;
+        padding:50px;
+    }
+    /*Ha sido necesario también colocar en cada media querie este texto
+    cambiando también el tamaño de la letra*/
+    h1{
+        margin-top:40%;
+        margin-left: 50%;
+        font-size: 32pt;
+    }
+}
+/*La cuarta y última media querie está pensada para dispositivos móviles*/
+@media screen and ((max-device-width: 450px)){
+    /*Definimos estilos propios para esta resolución*/
+    #cabecera{
+        width: 80%;
+        height: 100%;
+    }
+    /*Situamos correctament el contenidode dentro del header*/
+    #cabecera, #intel, #logo{
+        margin-bottom:5%;
+    }
+    #logo{
+        width: 13%;
+        height: auto;
+    }
+    /*Colocamos los 2 contenedores laterales*/
+    nav{
+        margin-top:50%;
+        display: flex;
+        flex-direction: column;
+        font-size: 16pt;
+        height: auto;
+        width: 15%;
+        z-index:1000;
+        text-align: center;
+    }
+    #camiseta{
+        margin-top:50%;
+        display:flex;
+        flex-direction: column;
+        align-self: flex-end;
+        align-items: center;
+        height: auto;
+        width: 11%;
+    }
+    /*Colocamos el contenido principal de la página*/
+    main{
+        margin-top:15%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex-grow: 1;
+        padding:50px;
+    }
+    /*Ha sido necesario también colocar en cada media querie este texto
+    cambiando también el tamaño de la letra*/
+    h1{
+        margin-top:50%;
+        margin-left: 50%;
+        font-size: 32pt;
+    }
+}
+
+
+
